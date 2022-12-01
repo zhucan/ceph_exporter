@@ -63,6 +63,7 @@ func (exporter *Exporter) getCollectors() []prometheus.Collector {
 		NewMonitorCollector(exporter),
 		NewOSDCollector(exporter),
 		NewCrashesCollector(exporter),
+		NewBucketUsageCollector(exporter),
 	}
 
 	if exporter.RbdMirror {
